@@ -209,19 +209,15 @@ main {
 
 /* ----- LOGO ----- */
 
-/* o . aplica o seletor para class, ou seja, .class */
+.logo img {
+    height: 3rem;
+    width: auto;
+    display: block;
+}
+
 .logo {
     font: 700 1.8rem 'Poppins', sans-serif;
     color: var(--title-color);
-}
-
-/* neste seletor, é indicado que busque a tag span dentro da class logo */
-.logo span {
-    color: var(--base-color);
-}
-
-.logo-alt span {
-    color: var(--body-color);
 }
 
 /* ----- NAVIGATION ----- */
