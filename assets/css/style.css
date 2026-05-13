@@ -511,20 +511,19 @@ nav.show div.icon-close {
     transition: 0.4s;
 }
 
-.card i {
+.card .icon {
     display: block;
-    margin-bottom: 1.5rem;
-    font-size: 5rem;
-    color: var(--base-color);
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto 1.5rem;
 
     transition: 0.3s;
 }
 
-.card i:hover {
+.card .icon:hover {
     /*transform: translateY(-20px);*/
     transform: scale(1.3);
 }
-
 
 .card .title {
     font-size: 1.5rem;
@@ -822,7 +821,10 @@ footer .social a:hover {
 
     /* SERVICES */
     .cards {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        max-width: 56rem;
+        margin: 0 auto;
     }
 
     .card {
