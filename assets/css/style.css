@@ -32,22 +32,29 @@ img {
 :root {
     --header-height: 4.5rem;
 
-    /* colors */
-    --hue: 32;
-    /* HSL color mode */
-    --base-color: hsl(var(--hue) 36% 57%);
-    --base-color-second: hsl(var(--hue) 65% 88%);
-    --base-color-alt: hsl(var(--hue) 57% 70%);
-    --title-color: hsl(var(--hue) 41% 10%);
-    --text-color: hsl(0 0% 46%);
-    --text-color-light: hsl(0 0% 98%);
-    --body-color: hsl(0 0% 98%);
+    /* colors - Lírio da Paz */
+    --color-primary: hsl(108 13% 36%);
+    --color-secondary: hsl(125 16% 53%);
+    --color-background: hsl(0 0% 100%);
+    --color-background-soft: hsl(106 29% 89%);
+    --color-text: hsl(0 0% 46%);
+    --color-text-light: hsl(0 0% 98%);
+    --color-accent: hsl(51 50% 62%);
+
+    /* compatibility with original template */
+    --base-color: var(--color-secondary);
+    --base-color-second: var(--color-background-soft);
+    --base-color-alt: var(--color-primary);
+    --title-color: var(--color-primary);
+    --text-color: var(--color-text);
+    --text-color-light: var(--color-text-light);
+    --body-color: var(--color-background);
 
     /* fonts */
     --title-font-size: 1.875rem;
     --subtitle-font-size: 1rem;
 
-    --title-font: 'Popins', sans-serif;
+    --title-font: 'Poppins', sans-serif;
     --body-font: 'DM Sans', sans-serif;
 }
 
@@ -105,15 +112,15 @@ body {
 .divider-1 {
     height: 1.5px;
     background: linear-gradient(270deg,
-            hsla(var(--hue), 36%, 57%, 1) 0%,
-            hsla(var(--hue), 65%, 88%, 0.34) 100%);
+            var(--color-secondary) 0%,
+            var(--color-background-soft) 100%);
 }
 
 .divider-2 {
     height: 1px;
     background: linear-gradient(270deg,
-            hsla(var(--hue), 65%, 88%, 0.34) 0%,
-            hsla(var(--hue), 36%, 57%, 1) 100%);
+            var(--color-background-soft) 0%,
+            var(--color-secondary) 100%);
 }
 
 /* ----- LAYOUT ----- */
@@ -175,12 +182,12 @@ body {
     z-index: 100;
     /*aplicar em 100, para que ele assuma seu tamanho total já configurado*/
     background-color: var(--body-color);
-    box-shadow: 0 0 5px rgba(var(--hue), 12, 2, 0.1);
+    box-shadow: 0 0 5px hsl(108 13% 36% / 0.1);
 }
 
 #header.scroll {
     background-color: var(--base-color);
-    box-shadow: 0 0 10px rgba(var(--hue), 12, 2, 0.8);
+    box-shadow: 0 0 10px hsl(108 13% 36% / 0.25);
     /* na ordem de descrição: 1º-deslocamento do eixo horizontal 2º-deslocamento do eixo vertical 3º- blur 4º-relativo ao "spread", o espalhamento da cor.*/
 }
 
@@ -500,7 +507,7 @@ nav.show div.icon-close {
 
 .card {
     padding: 3.625rem 2rem;
-    box-shadow: 0 0 15px rgba(var(--hue), 0, 0, 0.1);
+    box-shadow: 0 0 15px hsl(108 13% 36% / 0.1);
     border-bottom: 0.25rem solid var(--base-color);
     border-radius: 0.25rem 0.25rem 0 0;
     text-align: center;
@@ -550,7 +557,7 @@ nav.show div.icon-close {
 
 #testimonials blockquote {
     padding: 2rem;
-    box-shadow: 0 0 12px rgba(var(--hue), 0, 0, 0.1);
+    box-shadow: 0 0 12px hsl(108 13% 36% / 0.1);
     border-radius: 0.25rem;
     /*será incluído um plugin/biblioteca de um código já utilizado para o sistema carrossel*/
 }
