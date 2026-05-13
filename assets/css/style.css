@@ -87,6 +87,7 @@ body {
     /*cor de fundo*/
     color: var(--text-color-light);
     /*cor do texto do botão*/
+
     display: inline-flex;
     /*para desabilitar o display inline por padrão do tipo de tag. Assim passará a ser possível aplcar a altura e ainda o alinhameto do conteúdo.*/
     height: 3.5rem;
@@ -97,16 +98,20 @@ body {
     /*afastamento do conteído em relação às margens, na ordem: superior/inferior e laterais*/
     border-radius: 0.25rem;
     /*arredondamento das bordas*/
+    
     font: 500 1rem var(--body-font);
     /*configuração da fonte*/
+    
     transition: background 0.3s;
     /*configuração da transição configurada no hover, do que em quanto tempo.*/
 }
 
 /*habilitação de efeito hover, ao passar o mouse irá aconteceo que for descrito.*/
 .button:hover {
-    color: var(--base-color-alt);
-    /*quando passar o mouse, assumirá essa cor*/
+    background-color: var(--base-color-second);
+    color: var(--title-color);
+
+    transform: scale(1.1);
 }
 
 .divider-1 {
