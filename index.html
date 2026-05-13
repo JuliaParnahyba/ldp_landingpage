@@ -11,7 +11,7 @@
     <!--relação com a portabilidade de tela, ou seja, irá se adaptar a diferentes dimensões/tamanhos de tela.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Descrição do "Título geral" da página, o qual ficará descrito e visível na aba da webpage, ou ainda quando for incluída nos favoritos, irá levar essa descrição como nome do conteúdo.-->
-    <title>OriginSix | Projeto NLW#6 - Together</title>
+    <title>Lírio da Paz • Paisagismo e Jardinagem</title>
 
     <!--para incluir a folha de trabalho CSS dos ícones como fontes-->
     <link rel="stylesheet" href="./assets/fonts/style.css" />
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <!--para incluir a folha de trabalho CSS-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!--links de pré-conexão com o google fonts para que seja possível utilizar as fontes desejadas dna folha de CSS. Ao executar no navegador, a página irá "chamar" os links associados às fontes do google, fazendo com que elas sejam carregadas na página adequadamente.-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,9 @@
     <header id="header">
         <!--class scroll incluída para que ela possa gerar uma configuração de sobreado ao rolar a tela, enquanto o menu se mantém fixo.-->
         <nav class="container">
-            <a class="logo" href="#">manhood<span>salon.</span></a>
+            <a class="logo" href="#">
+                <img src="./assets/svg/Logo Marca.svg" alt="Logo do Lírio da Paz, com um lírio branco e o nome da empresa" />
+            </a>
             <!--criação do menu-->
             <div class="menu">
                 <ul class="grid">
@@ -61,22 +63,25 @@
         <!-- ## HOME ##-->
         <section class="section" id="home">
             <div class="container grid">
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1599351430140-c70f0250bd70?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=400"
-                        alt="Mãos cortando um cabelo masculino." />
+                <div class="image-fundo-hrz">
+                    <img src="./assets/images/Jardim_6.2.png"
+                        alt="Jardim com paisagismo elegante, com algumas árvores e flores" />
                 </div>
-
+                <!--
+                <div class="image-fundo-vrt">
+                    <img src="assets/images/Jardim_6.1.png"
+                        alt="Jardim com paisagismo elegante, com algumas árvores e flores" />
+                </div>
+                -->
                 <div class="text">
                     <h2 class="title">
-                        Cuidado e estilo que estavam faltando para você.
+                        Mais vida para o seu espaço.
                     </h2>
                     <p class="subtitle">
-                        Um salão exclusivo e especializado em tratamentos e cortes
-                        masculinos, para você melhorar ainda mais a sua aparência.
+                        Conectando pessoas à natureza.
                     </p>
                     <a class="button"
-                        href="https://api.whatsapp.com/send?phone=+5521975307661&text=E aí?! Quero agendar um serviço!">Agende
-                        o seu horário</a>
+                        href="https://api.whatsapp.com/send?phone=+5521988581324&text=Olá! Gostaria de solicitar um orçamento!">Agendar uma visita</a>
                 </div>
             </div>
         </section>
@@ -89,8 +94,8 @@
             <!--section.section#about>.container.grid atalho pra criar uma tag section com class="section" id="about" com tag filha (>) div de classe="container grid"-->
             <div class="container grid">
                 <div class="image">
-                    <img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                        alt="Time de barbeiros cortando cabelos" />
+                    <img src="./assets/images/Sociedade.png"
+                        alt="Sócios, pai e filha, juntos em um ambiente natural, próximo a um ornamento vegetal" />
                 </div>
                 <div class="text">
                     <!--h2.title+p*3 = corresponde a um atalho que criará uma tag h2 de classe title e fora dele 3 tags p. Ao clicar no enter o "Emmet" do VS irá transformar na estrutura descrita em estrutura html, abaixo:-->
@@ -232,7 +237,7 @@
                         Entre em contato conosco, tire suas dúvidas, mande seu elogio ou
                         crítica. Queremos te ouvir!
                     </p>
-                    <a href="https://api.whatsapp.com/send?phone=+5521975307661&text=E aí?! Como faço para agendar um serviço?"
+                    <a href="https://api.whatsapp.com/send?phone=+5521986817953&text=E aí?! Como faço para agendar um serviço?"
                         class="button" target="_blank">
                         <!--Para abrir uma nova aba/página-->
                         <i class="icon-whatsapp"></i>
@@ -242,9 +247,9 @@
 
                 <div class="links">
                     <ul class="grid">
-                        <li><i class="icon-phone"></i>+55 21 97530-7661</li>
-                        <li><i class="icon-map-pin"></i>Rua dos Bobos, nº0</li>
-                        <li><i class="icon-mail"></i>mandeseuemail@manhoodsalon.com</li>
+                        <li><i class="icon-phone"></i>+55 21 98681-7953</li>
+                        <li><i class="icon-map-pin"></i>Alto da Boa Vista, Rio de Janeiro - RJ</li>
+                        <li><i class="icon-mail"></i>mandeseuemail@liriodapaz.com</li>
                     </ul>
                 </div>
             </div>
@@ -256,14 +261,15 @@
     <footer class="section" id="footer">
         <div class="container grid">
             <div class="brand">
-                <a class="logo logo-alt" href="#">manhood<span>salon.</span></a>
-                <p class="text_logo">©2022 Manhoodsalon.</p>
+                <a class="logo" href="#">
+                <img src="./assets/svg/Logo Marca.svg" alt="Logo do Lírio da Paz, com um lírio branco e o nome da empresa" />
+                </a>
+                <p class="text_logo">©2026 Lírio da Paz.</p>
                 <p class="text_logo">Todos os direitos reservados.</p>
             </div>
 
             <div class="social">
                 <a href="https://www.instagram.com/juparnahyba/" target="_blank"><i class="icon-instagram"></i></a>
-                <a href="https://www.facebook.com/ju.parnahyba" target="_blank"><i class="icon-facebook"></i></a>
                 <a href="https://www.youtube.com/channel/UCzYBM4UvJRrKy4A0w2OMBnw" target="_blank"><i
                         class="icon-youtube"></i></a>
             </div>
@@ -279,7 +285,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--tag para relacionar à folha de trabalho JavaScript, o qual foi previamente criada na pasta do mesmo projeto, caminho que estará desrito no valor src.-->
-    <script src="./main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
