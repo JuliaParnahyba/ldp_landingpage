@@ -34,6 +34,7 @@ img {
 
     /* colors - Lírio da Paz */
     --color-primary: hsl(108 13% 36%);
+    --color-surface-dark: hsl(108 18% 28%);
     --color-secondary: hsl(125 16% 53%);
     --color-background: hsl(0 0% 100%);
     --color-background-soft: hsl(106 29% 89%);
@@ -43,6 +44,7 @@ img {
 
     /* compatibility with original template */
     --base-color: var(--color-secondary);
+    --base-color-dark: var(--color-surface-dark);
     --base-color-second: var(--color-background-soft);
     --base-color-alt: var(--color-primary);
     --title-color: var(--color-primary);
@@ -186,23 +188,18 @@ body {
     left: 0;
     z-index: 100;
     /*aplicar em 100, para que ele assuma seu tamanho total já configurado*/
-    background-color: var(--body-color);
-    box-shadow: 0 0 5px hsl(108 13% 36% / 0.1);
+    background-color: var(--base-color-second);
+    box-shadow: 0 0 15px hsl(108 13% 36% / 0.1);
 }
 
 #header.scroll {
-    background-color: var(--base-color);
-    box-shadow: 0 0 10px hsl(108 13% 36% / 0.25);
+    /*background-color: var(--base-color);*/
+    box-shadow: 0 0 20px hsl(108 13% 36% / 0.25);
     /* na ordem de descrição: 1º-deslocamento do eixo horizontal 2º-deslocamento do eixo vertical 3º- blur 4º-relativo ao "spread", o espalhamento da cor.*/
 }
 
-#header.scroll .logo span {
-    color: var(--body-color);
-    transition: 0.2s;
-}
-
 #header.scroll .icon-menu {
-    color: var(--body-color);
+    color: var(--title-color);
     transition: 0.2s;
 }
 
@@ -651,7 +648,7 @@ nav.show div.icon-close {
 
 /* ----- FOOTER ----- */
 footer {
-    background: var(--base-color);
+    background: var(--color-secondary);
 }
 
 footer.section {
@@ -770,7 +767,7 @@ footer .social a:hover {
     }
 
     #header.scroll nav .menu ul li a.title {
-        color: var(--body-color);
+        color: var(--color-text-soft);
     }
 
     #header.scroll nav .menu ul li a::after {
