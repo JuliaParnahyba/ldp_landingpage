@@ -133,11 +133,9 @@ body {
 /* ----- LAYOUT ----- */
 
 .container {
-    width: 95%;
-    /* largura */
-    /*margin: 0 auto; /*aplica os afastamentos superir e inferir, no primeiro valor e laterais no segundo valor */
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid {
@@ -441,6 +439,7 @@ nav.show div.icon-close {
 
 /* o seletor de id about, e será chamada a classe container de dentro do id indicado. */
 #about .container {
+    width: 100%;
     margin: 0;
 }
 
@@ -472,7 +471,10 @@ nav.show div.icon-close {
 #about .image img {
     position: relative;
     /* habilita novas propriedades pro CSS para o elemento desejado */
-    left: 2rem;
+    width: 100%;
+    max-width: none;
+    left: 0;
+    display: block;
 }
 
 /*mesmas propriedades para mais de um elemento, ficam descritos separados por vírgula*/
@@ -827,8 +829,13 @@ footer .copyright {
         grid-auto-flow: column;
     }
 
-    #about .text {
-        text-align: left;
+    #about .image {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #about .image img {
+        left: 2rem;
     }
 
     /*QUANDO HOUVER MAIS DE UM PARÁGRAFO, PARA LIMITAR O CRESCIMENTO DA IMAGEM ALÉM DA FOTOGRAFIA.
