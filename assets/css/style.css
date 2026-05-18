@@ -159,6 +159,7 @@ body {
 
 .section .subtitle {
     font-size: var(--subtitle-font-size);
+    text-align: justify;
 }
 
 .section header {
@@ -487,16 +488,13 @@ nav.show div.icon-close {
 #about .text {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    text-align: center;
+    text-align: left;
 }
 
 #about .text h1 {
     margin-bottom: 1rem;
 }
 
-#about .text p {
-    margin-bottom: 2rem;
-}
 
 /* ----- SERVICES ----- */
 
@@ -831,17 +829,27 @@ footer .copyright {
 
     #about .image {
         width: 100%;
-        margin-left: 0;
+        margin-left: 2rem;
     }
 
     #about .image img {
+        position: relative;
+        width: 100%;
         left: 2rem;
     }
 
-    /*QUANDO HOUVER MAIS DE UM PARÁGRAFO, PARA LIMITAR O CRESCIMENTO DA IMAGEM ALÉM DA FOTOGRAFIA.
-  #about .image::before {
-    max-height: 19rem;
-  }*/
+    /*QUANDO HOUVER MAIS DE UM PARÁGRAFO, PARA LIMITAR O CRESCIMENTO DA IMAGEM ALÉM DA FOTOGRAFIA.*/
+    #about .image::before {
+        max-height: 19rem;
+    }
+
+    #about .text {
+        padding-left: 4rem;
+    }
+
+    #about .text p {
+        padding-right: 2rem;
+    }
 
     /* SERVICES */
     .cards {
