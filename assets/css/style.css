@@ -652,14 +652,19 @@ footer {
 }
 
 footer.section {
-    padding: 4rem 0;
+    padding: 4rem 0 1.5rem;
     /*reajuste dos espaçamento do paddingo em correção do bug pelo ajuste dos paddings das sections.*/
 }
 
 footer .logo {
     display: inline-block;
     /*a logo é um elemento do tipo a, assim o display dele, pelo User Agant é inline, por isso é necessário modificar para display inline-block, dessa forma irá assumir a configuração do margin-bottom*/
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
+}
+
+footer .logo img {
+    height: 4rem;
+    width: auto;
 }
 
 footer .brand p {
@@ -683,6 +688,16 @@ footer .social a:hover {
     /*ao passar o mause*/
     transform: translateY(-8px);
     /*os ícones irão "animar" se movimentando no eixo Y (vertical), para cima (pixels negativos)*/
+}
+
+footer .copyright {
+    color: var(--text-color-light);
+    text-align: center;
+    margin: 4rem 0 0;
+
+    font-size: 0.60rem;
+    opacity: 0.70;
+    letter-spacing: 0.03rem;
 }
 
 /* ----- VOLTA PARA HOME ----- */
@@ -855,18 +870,10 @@ footer .social a:hover {
     }
 
     /*FOOTER*/
-    footer.section {
-        padding: 3.75rem 0;
-    }
-
-    footer .container {
-        grid-auto-flow: column;
+    footer .container.grid {
+        display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    footer .text_logo {
-        font-size: 14px;
     }
 }
 
