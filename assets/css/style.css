@@ -381,15 +381,42 @@ nav.show div.icon-close {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    position: relative;
+}
+
+#home::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 43%;
+
+    height: 13rem;
+
+    background: hsl(106 29% 89% / 0.8);
+    filter: blur(12px);
+
+    z-index: 0;
 }
 
 /* o seletor de id home, e será chamada a classe container de dentro do id indicado. */
 #home .container {
     height: 100%;
     min-height: 100%;
+
     display: grid;
     place-items: center;
+    justify-items: center;
+
+    padding-top: 12rem;
     margin: 0 auto;
+
+    position: relative;
+    /*para habilitar o posicionamento do sudo element relativo à sua caixa pai.*/
+    z-index: 1;
+    /*eixo z, de profundidade, como camadas, para que o conteúdo fique acima do sudo element criado abaixo.*/
 }
 
 #home .image {
@@ -431,9 +458,20 @@ nav.show div.icon-close {
 }
 
 #home .text {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 24rem;
+
+    margin-left: auto;
+    margin-right: auto;
+
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #home .text h1 {
@@ -442,6 +480,13 @@ nav.show div.icon-close {
 
 #home .text p {
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+#home .button {
+    margin-top: 2rem;
+    width: fit-content;
+    justify-content: center;
 }
 
 /* ----- ABOUT ----- */
@@ -820,11 +865,18 @@ footer .copyright {
     #home {
         background-image: url("../images/Jardim_6-psg.png");
     }
-    
+
+    #home::before {
+        height: 10rem;
+    }
+
+   
     #home .container {
         grid-auto-flow: column;
         justify-content: space-between;
+        
         margin: 0 auto;
+        padding-top: 12rem;
     }
 
     #home .image {
@@ -832,9 +884,31 @@ footer .copyright {
     }
 
     #home .text {
-        order: 0;
-        max-width: 26rem;
+        width: 100%;
+        max-width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
         text-align: left;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #home .text h1 {
+        margin-bottom: 1rem;
+    }
+
+    #home .text p {
+        margin-bottom: 2rem;
+    }
+
+    #home .button {
+        margin-top: 2rem;
+        width: fit-content;
+        justify-content: center;
     }
 
     /*ABOUT*/
