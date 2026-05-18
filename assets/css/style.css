@@ -147,8 +147,8 @@ body {
 
 .section {
     /*--: suprior/inferior e laterais; */
-    /*padding: 5rem 0; /* afastamento ao redor do conteúdo da caixa*/
-    padding: calc(5rem + var(--header-height)) 0;
+    padding: 5rem 0; /* afastamento ao redor do conteúdo da caixa*/
+    /*padding: calc(5rem + var(--header-height)) 0;
     /* incluído novo padding em função das correções de bug e aplicação da responsividade >1200px */
 }
 
@@ -373,11 +373,23 @@ nav.show div.icon-close {
 
 #home {
     overflow: hidden;
+
+    height: 100vh;
+    padding: 0;
+
+    background-image: url("../images/Jardim_6-rtt.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* o seletor de id home, e será chamada a classe container de dentro do id indicado. */
 #home .container {
-    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
 }
 
 #home .image {
@@ -805,6 +817,10 @@ footer .copyright {
     }
 
     /*HOME*/
+    #home {
+        background-image: url("../images/Jardim_6-psg.png");
+    }
+    
     #home .container {
         grid-auto-flow: column;
         justify-content: space-between;
