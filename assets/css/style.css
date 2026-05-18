@@ -38,6 +38,7 @@ img {
     --color-secondary: hsl(125 16% 53%);
     --color-background: hsl(0 0% 100%);
     --color-background-soft: hsl(106 29% 89%);
+    --color-highlight: hsl(102 28% 58%);
     --color-text: hsl(0 0% 46%);
     --color-text-light: hsl(0 0% 98%);
     --color-accent: hsl(51 50% 62%);
@@ -759,7 +760,7 @@ footer .copyright {
 
 /* ----- VOLTA PARA HOME ----- */
 .back-to-top {
-    background: var(--base-color);
+    background: var(--color-highlight);
     color: var(--text-color-light);
 
     position: fixed;
@@ -971,6 +972,7 @@ footer .copyright {
     }
 
     .back-to-top.show:hover {
+        background: var(--base-color);
         color: var(--title-color);
     }
 
