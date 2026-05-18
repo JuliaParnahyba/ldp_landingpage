@@ -691,17 +691,36 @@ nav.show div.icon-close {
     margin-right: 0.625rem;
 }
 
-#contact ul.grid {
-    gap: 2rem;
+#contact .links ul.social {
+    gap: 1.25rem;
 }
 
-#contact ul li {
+#contact .links ul.social li,
+#contact .contact-link {
     display: flex;
     align-items: center;
+    gap: 0.55rem;
 }
 
-#contact ul li i {
+#contact .links ul.social li {
+    color: var(--text-color);
+}
+
+#contact .links ul.social i {
     color: var(--base-color);
+    font-size: 1.5rem;
+}
+
+#contact .contact-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s, transform 0.2s;
+}
+
+#contact .contact-link:hover {
+    color: var(--base-color);
+    transform: translateY(-2.5px);
 }
 
 /* ----- FOOTER ----- */
@@ -710,7 +729,7 @@ footer {
 }
 
 footer.section {
-    padding: 4rem 0 1.5rem;
+    padding: 0.15rem 0 1.5rem;
     /*reajuste dos espaçamento do paddingo em correção do bug pelo ajuste dos paddings das sections.*/
 }
 
@@ -727,44 +746,10 @@ footer .logo {
     margin-bottom: 0rem;
 }
 
-footer .logo img {
-    height: 4rem;
-    width: auto;
-}
-
-footer .brand p {
-    color: var(--text-color-light);
-    margin-bottom: 0.75rem;
-}
-
-footer i {
-    font-size: 1.5rem;
-    color: var(--text-color-light);
-}
-
-footer .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-footer .social a {
-    transition: 0.3s;
-    display: inline-block;
-    /*necessário atribuir a configuração inline-block, para que seja possível a animação aplicada pelo hover abaixo*/
-}
-
-footer .social a:hover {
-    /*ao passar o mause*/
-    transform: translateY(-8px);
-    /*os ícones irão "animar" se movimentando no eixo Y (vertical), para cima (pixels negativos)*/
-}
-
 footer .copyright {
     color: var(--text-color-light);
     text-align: center;
-    margin: 4rem 0 0;
+    margin: 2rem 0 0;
 
     font-size: 0.60rem;
     opacity: 0.70;
@@ -990,20 +975,6 @@ footer .copyright {
     }
 
     /*FOOTER*/
-    footer .container.grid {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    footer .brand {
-        justify-self: flex-start;
-    }
-
-    footer .social {
-        justify-content: flex-end;
-    }
 }
 
 /* LARGE DEVICES: 1023 > */
